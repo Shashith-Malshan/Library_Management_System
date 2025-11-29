@@ -20,6 +20,6 @@ public class Book {
     private String name;
     private String description;
     private String category;
-    private boolean status;
+    private boolean isAvailable;
 
 }

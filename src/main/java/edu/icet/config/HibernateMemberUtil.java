@@ -4,7 +4,7 @@ import edu.icet.model.entity.Member;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class HibernateUtil {
+public class HibernateMemberUtil {
 
     private static SessionFactory sessionFactory;
     private static Configuration config = new Configuration();
