@@ -18,7 +18,7 @@ public class MemberRepository {
 
     public List<Member> getAll() {
 
-        return null;
+
     }
 
     public void addMember(Member member) {
