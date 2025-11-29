@@ -15,4 +15,7 @@ public class BookService {
     public List<Book> getAll() {
     return bookRepository.getAll();
     }
+
+    public void removeBook(String id) {
+        bookRepository.removeBook(id);    }
 }

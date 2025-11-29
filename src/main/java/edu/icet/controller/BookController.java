@@ -28,6 +28,10 @@ public class BookController {
         }
         return null;
     }
+    @DeleteMapping("{id}")
+    public void removeBook(@PathVariable String id){
+        bookService.removeBook(id);
+    }
 
 
     @PostMapping("add")
@@ -35,6 +39,8 @@ public class BookController {
         bookService.addMember(book);
 
     }
+
+
 
 
 

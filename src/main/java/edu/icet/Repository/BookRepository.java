@@ -30,4 +30,9 @@ public class BookRepository {
         return bookList;
 
     }
+
+    public void removeBook(String id) {
+        Transaction transaction=session.beginTransaction();
+        session.remove(session.find(Book.class,id));
+    }
 }
