@@ -3,6 +3,8 @@ package edu.icet.service;
 import edu.icet.Repository.BookRepository;
 import edu.icet.model.entity.Book;
 
+import java.util.List;
+
 public class BookService {
     BookRepository bookRepository=new BookRepository();
 
@@ -10,5 +12,9 @@ public class BookService {
 
     public void addMember(Book book) {
         bookRepository.addMember(book);
+    }
+
+    public List<Book> getAll() {
+    return bookRepository.getAll();
     }
 }

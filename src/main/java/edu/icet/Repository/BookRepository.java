@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import java.util.List;
+
 public class BookRepository {
 
     SessionFactory sessionFactory= HibernateUtil.getSessionFactory();
@@ -18,4 +20,7 @@ public class BookRepository {
     }
 
 
+    public List<Book> getAll() {
+
+    }
 }
