@@ -19,6 +19,17 @@ public class BookController {
        return bookService.getAll();
     }
 
+    @GetMapping("{id}")
+    public Book getBook(@PathVariable String id){
+        for (Book book:bookService.getAll()){
+            if(book.getId().equalsIgnoreCase(id)){
+                return book;
+            }
+        }
+        return null;
+    }
+
+
     @PostMapping("add")
     public void addBook(@RequestBody Book book){
         bookService.addMember(book);
