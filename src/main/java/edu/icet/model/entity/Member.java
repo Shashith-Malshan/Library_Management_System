@@ -1,5 +1,7 @@
 package edu.icet.model.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.*;
 
 @Getter
@@ -8,8 +10,11 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 
+
+@Entity
 public class Member {
 
+    @Id
     private String id;
     private String name;
     private String nic;

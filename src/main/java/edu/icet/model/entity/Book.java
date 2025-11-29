@@ -1,5 +1,7 @@
 package edu.icet.model.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.*;
 
 @Setter
@@ -8,8 +10,11 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 
+
+@Entity
 public class Book {
 
+    @Id
     private String id;
     private String isbn;
     private String name;

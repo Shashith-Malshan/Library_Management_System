@@ -13,4 +13,8 @@ public class MemberService {
     public List<Member> getAll() {
         return memberRepository.getAll();
     }
+
+    public void addMember(Member member) {
+        memberRepository.addMember(member);
+    }
 }

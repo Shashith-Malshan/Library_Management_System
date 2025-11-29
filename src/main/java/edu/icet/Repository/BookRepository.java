@@ -1,30 +1,21 @@
 package edu.icet.Repository;
 
 import edu.icet.config.HibernateUtil;
-import edu.icet.model.entity.Member;
+import edu.icet.model.entity.Book;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import java.util.List;
+public class BookRepository {
 
-public class MemberRepository {
-
-
-    SessionFactory sessionFactory=HibernateUtil.getSessionFactory();
+    SessionFactory sessionFactory= HibernateUtil.getSessionFactory();
     Session session= sessionFactory.openSession();
 
-
-
-    public List<Member> getAll() {
-
-        return null;
-    }
-
-    public void addMember(Member member) {
+    public void addMember(Book book) {
         Transaction transaction=session.beginTransaction();
-        session.persist(member);
+        session.persist(book);
         transaction.commit();
-
     }
+
+
 }
