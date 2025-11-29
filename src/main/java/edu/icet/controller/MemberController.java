@@ -20,11 +20,22 @@ public class MemberController {
         return memberService.getAll();
     }
 
+    @GetMapping("{id}")
+    public Member getMember(@PathVariable String id){
+        for (Member member:memberService.getAll()){
+            if(member.getId().equalsIgnoreCase(id)){
+                return member;
+            }
+        }
+        return null;
+    }
+
     @PostMapping("add")
     public void addMember(@RequestBody Member member){
         memberService.addMember(member);
 
     }
+
 
 
 
