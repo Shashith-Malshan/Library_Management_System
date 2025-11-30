@@ -36,4 +36,10 @@ public class BookRepository {
         session.remove(session.find(Book.class,id));
         transaction.commit();
     }
+
+    public void update(Book book) {
+        Transaction transaction=session.beginTransaction();
+        session.merge(book);
+        transaction.commit();
+    }
 }

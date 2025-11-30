@@ -39,6 +39,10 @@ public class BookController {
         bookService.addMember(book);
 
     }
+    @PutMapping("update")
+    public void update(@RequestBody Book book){
+        bookService.update(book);
+    }
 
 
 

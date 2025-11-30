@@ -18,4 +18,8 @@ public class BookService {
 
     public void removeBook(String id) {
         bookRepository.removeBook(id);    }
+
+    public void update(Book book) {
+        bookRepository.update(book);
+    }
 }
