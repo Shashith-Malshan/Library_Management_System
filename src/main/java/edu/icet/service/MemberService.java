@@ -17,4 +17,8 @@ public class MemberService {
     public void addMember(Member member) {
         memberRepository.addMember(member);
     }
+
+    public void remove(String id) {
+        memberRepository.remove(id);
+    }
 }

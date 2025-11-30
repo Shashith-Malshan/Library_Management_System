@@ -30,6 +30,11 @@ public class MemberController {
         return null;
     }
 
+    @DeleteMapping("{id}")
+    public void removeMember(@PathVariable String id){
+        memberService.remove(id);
+    }
+
     @PostMapping("add")
     public void addMember(@RequestBody Member member){
         memberService.addMember(member);

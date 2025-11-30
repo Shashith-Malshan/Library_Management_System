@@ -34,4 +34,10 @@ public class MemberRepository {
         transaction.commit();
 
     }
+
+    public void remove(String id) {
+        Transaction transaction=session.beginTransaction();
+        session.remove(session.find(Member.class,id));
+        transaction.commit();
+    }
 }

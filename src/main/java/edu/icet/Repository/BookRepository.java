@@ -34,5 +34,6 @@ public class BookRepository {
     public void removeBook(String id) {
         Transaction transaction=session.beginTransaction();
         session.remove(session.find(Book.class,id));
+        transaction.commit();
     }
 }
