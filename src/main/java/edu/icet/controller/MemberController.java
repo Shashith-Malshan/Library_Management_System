@@ -41,6 +41,11 @@ public class MemberController {
 
     }
 
+    @PutMapping("update")
+    public void merge(@RequestBody Member member){
+        memberService.merge(member);
+    }
+
 
 
 

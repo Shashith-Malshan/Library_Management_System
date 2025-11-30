@@ -21,4 +21,8 @@ public class MemberService {
     public void remove(String id) {
         memberRepository.remove(id);
     }
+
+    public void merge(Member member) {
+        memberRepository.merge(member);
+    }
 }

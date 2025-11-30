@@ -40,4 +40,10 @@ public class MemberRepository {
         session.remove(session.find(Member.class,id));
         transaction.commit();
     }
+
+    public void merge(Member member) {
+    Transaction transaction=session.beginTransaction();
+    session.merge(member);
+    transaction.commit();
+    }
 }
